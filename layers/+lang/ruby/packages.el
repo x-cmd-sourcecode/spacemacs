@@ -50,6 +50,7 @@
     ruby-test-mode
     ruby-tools
     (rvm :toggle (eq ruby-version-manager 'rvm))
+    shadowenv
     smartparens))
 
 (defun ruby/init-bundler ()
@@ -396,6 +397,10 @@
     :defer t
     ;; initialized via `spacemacs//ruby-setup-version-manager'
     ))
+
+(defun ruby/pre-init-shadowenv ()
+  (spacemacs|eval-for-enabled-ruby-mode
+   (add-to-list 'spacemacs--shadowenv-modes 'mode)))
 
 (defun ruby/pre-init-smartparens ()
   (spacemacs|use-package-add-hook smartparens
