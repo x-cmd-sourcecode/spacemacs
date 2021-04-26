@@ -258,7 +258,7 @@
     ;; make `nameless-current-name' safe as a local variable for string
     ;; values
     (put 'nameless-current-name 'safe-local-variable #'stringp)
-    (spacemacs|diminish nameless-mode " 🅽" " [n]")
+    (spacemacs|diminish nameless-mode " ⒩" " (n)")
     (spacemacs|add-toggle nameless
       :status nameless-mode
       :on (nameless-mode)
