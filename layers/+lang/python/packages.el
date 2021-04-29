@@ -57,7 +57,6 @@
             :toggle (eq python-virtualenv-management 'pyvenv))
     (ruff-format :toggle (eq 'ruff python-formatter))
     semantic
-    shadowenv
     sphinx-doc
     smartparens
     xcscope
@@ -470,9 +469,6 @@
     (add-hook 'python-mode-hook
               'spacemacs//disable-semantic-idle-summary-mode t))
   (add-hook 'python-mode-hook 'semantic-mode))
-
-(defun python/pre-init-shadowenv ()
-  (add-to-list 'spacemacs--shadowenv-modes 'python-mode))
 
 (defun python/pre-init-smartparens ()
   (spacemacs|use-package-add-hook smartparens
