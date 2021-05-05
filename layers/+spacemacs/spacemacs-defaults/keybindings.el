@@ -60,7 +60,8 @@
         "kd"  "delete"
         "kD"  "delete-backward"
         "k`"  "hybrid"
-        "m"   "major mode commands"
+        "m"   "Major mode commands"
+        "M"   "Project commands"
         "n"   "narrow/numbers"
         "N"   "navigation"
         "o"   "user bindings"
@@ -97,6 +98,7 @@
         "xg"  "google-translate"
         "xj"  "justification"
         "xl"  "lines"
+        "xR"  "Randomize"
         "xt"  "transpose"
         "xw"  "words"
         "z"   "zoom"))
