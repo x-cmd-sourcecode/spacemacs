@@ -26,6 +26,7 @@
   '(
     (dired :location built-in)
     (dirvish :toggle (eq ranger-override-dired 'dirvish))
+    evil-snipe
     golden-ratio
     (ranger :toggle (not (eq ranger-override-dired 'dirvish)))))
 
@@ -64,6 +65,11 @@
     (when-let* ((icons-font dotspacemacs-default-icons-font))
       (with-eval-after-load icons-font
         (add-to-list 'dirvish-attributes icons-font)))))
+
+(defun ranger/post-init-evil-snipe ()
+  (add-hook 'ranger-mode-hook 'turn-off-evil-snipe-mode)
+  (when evil-snipe-enable-alternate-f-and-t-behaviors
+    (add-hook 'ranger-mode-hook 'turn-off-evil-snipe-override-mode)))
 
 (defun ranger/init-ranger ()
   (use-package ranger
