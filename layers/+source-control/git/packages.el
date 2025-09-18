@@ -28,9 +28,7 @@
     evil-collection
     evil-surround
     evil-snipe
-    ;; forge requires a C compiler on Windows so we disable
-    ;; it by default on Windows.
-    (forge :toggle (not (spacemacs/system-is-mswindows)))
+    forge
     ;; include the old git{attributes,config,ignore}-mode
     git-modes
     gitignore-templates
